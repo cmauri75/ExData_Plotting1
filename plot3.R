@@ -1,5 +1,5 @@
 rm(list=ls(all=TRUE))
-setwd("C:/TInvention/DataScience/DS4-ExploratoryDataAnalisys/ExData_Plotting1")
+#setwd("C:/TInvention/DataScience/DS4-ExploratoryDataAnalisys/ExData_Plotting1")
 
 #read only interesting data
 data = read.csv("household_power_consumption.txt",
