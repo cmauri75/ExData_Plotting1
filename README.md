@@ -18,6 +18,9 @@ The script files for doing it are ploat[1,2,3,4].R, all are fully working.
 * launch the scripts in your R enviroment
 
 source('plot4.R')
+
 source('plot3.R')
+
 source('plot2.R')
+
 source('plot1.R')
