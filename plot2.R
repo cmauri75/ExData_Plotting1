@@ -10,11 +10,11 @@ colnames(data) <- c("Date","Time","Global_active_power","Global_reactive_power",
 
 data$DateTime <- strptime(paste(data$Date,data$Time),format="%d/%m/%Y %H:%M:%S")
 
+png(file = "plot2.png", width=480, height=480)
+
 par(mfrow = c(1, 1), mar = c(5, 5, 2, 2))
 Sys.setlocale("LC_TIME", "English")
 
 with(data,plot(DateTime,Global_active_power,ylab = "Global Active Power (kilowatts)", xlab="",type = "l"))
 
-
-dev.copy(png, file = "plot2.png")
 dev.off()

@@ -10,6 +10,9 @@ colnames(data) <- c("Date","Time","Global_active_power","Global_reactive_power",
 
 data$DateTime <- strptime(paste(data$Date,data$Time),format="%d/%m/%Y %H:%M:%S")
 
+png(file = "plot4.png", width=480, height=480)
+
+
 par(mfrow = c(2, 2), mar = c(5, 5, 2, 2))
 Sys.setlocale("LC_TIME", "English")
 
@@ -29,13 +32,10 @@ legend("topright",
        col = c("black","red","blue"),
        legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
        bty = "n",
-       inset = -0.15,
-       y.intersp = 0.1,
        lty = 1, lwd=1)
 
 #4
 with(data,plot(DateTime,Global_reactive_power, xlab="datetime",type = "l"))
 
 
-dev.copy(png, file = "plot4.png", width = 1000, height= 800)
 dev.off()

@@ -13,9 +13,11 @@ colnames(data) <- c("Date","Time","Global_active_power","Global_reactive_power",
 #tail(data)
 #summary(data)
 
+png(file = "plot1.png", width=480, height=480)
+
 par(mfrow = c(1, 1), mar = c(5, 5, 2, 2))
 hist(data$Global_active_power,
      main = "Global Active Power",xlab = "Global Active Power (kilowatts)",
      col = "red")
-dev.copy(png, file = "plot1.png")
+
 dev.off()
